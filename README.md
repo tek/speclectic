@@ -1,6 +1,21 @@
 This is an adaption of [RoboTest][1] for [specs2][2].
 
-Consult the tests on how to use it.
+## Use
+
+Import your spec class from `org.specs2.robo` for acceptance-style or
+`org.specs2.robo.mutable` for unit-style.
+
+There are two variants in how the Robolectric universe is set up and torn down:
+
+* **ClassSpec** all examples in a class share Robolectric
+* **IsoSpec** each example has its isolated Robolectric
+
+## sbt
+
+```sbt
+resolvers += Resolver.bintrayRepo("tek", "releases")
+libraryDependencies += "tryp" %% "speclectic" % "+"
+```
 
 ## License
 
